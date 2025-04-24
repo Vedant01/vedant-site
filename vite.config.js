@@ -12,10 +12,17 @@ import rehypeSlug from 'rehype-slug';
 import rehypePrism from '@mapbox/rehype-prism';
 
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/build/' : '/',
-  assetsInclude: ['**/*.glb', '**/*.hdr', '**/*.glsl'],
+  base: '/',
+  assetsInclude: ['**/*.glb', '**/*.hdr', '**/*.glsl', '**/*.woff2'],
   build: {
-    assetsInlineLimit: 1024,
+    assetsInlineLimit: 0,
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+      },
+    },
   },
   server: {
     port: 7777,
