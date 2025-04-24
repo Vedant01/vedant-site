@@ -1,12 +1,6 @@
 import { RemixServer } from '@remix-run/react';
 
 
-// Use PassThrough only if available (Node.js)
-let PassThrough;
-try {
-  // Dynamically import stream for Node.js
-  PassThrough = (await import('stream')).PassThrough;
-} catch {}
 
 const ABORT_DELAY = 5000;
 
@@ -28,6 +22,10 @@ export default async function handleRequest(
   responseHeaders,
   remixContext
 ) {
+  let PassThrough;
+  try {
+    PassThrough = (await import('stream')).PassThrough;
+  } catch {}
   // Try Node.js streaming API first (prod)
   let ReactDOMServer;
   let usePipeableStream = false;
