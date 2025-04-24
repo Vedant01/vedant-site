@@ -17,12 +17,47 @@ import { baseMeta } from '~/utils/meta';
 import { Form } from '@remix-run/react';
 import styles from './contact.module.css';
 
+export { Contact as default } from './contact';
+
 export const meta = () => {
   return baseMeta({
     title: 'Contact',
     description:
       'Send me a message if you\'re interested in discussing a project or if you just want to say hi',
   });
+};
+
+export const action = async ({ request }) => {
+  const formData = await request.formData();
+  const name = formData.get('name');
+  const email = formData.get('email');
+  const message = formData.get('message');
+
+  // Validate form data
+  if (!name || !email || !message) {
+    return new Response('Missing required fields', { status: 400 });
+  }
+
+  // Process form data
+  try {
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: `From: ${email}\n\n${message}`,
+    };
+
+    await emailjs.send(
+      'service_3cqfs13',
+      'template_v4jikai',
+      templateParams,
+      '_Ya88Lmr8EK5VfPFm'
+    );
+
+    return new Response('Message sent successfully', { status: 200 });
+  } catch (error) {
+    console.error('EmailJS Error:', error);
+    return new Response('Failed to send message', { status: 500 });
+  }
 };
 
 const MAX_NAME_LENGTH = 100;
