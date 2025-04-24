@@ -1,7 +1,8 @@
 import { PassThrough } from "stream";
 import * as ReactDOMServer from "react-dom/server";
 import { RemixServer } from "@remix-run/react";
-import { Response } from "@remix-run/node";
+import pkg from "@remix-run/node";
+const { Response } = pkg;
 
 export default function handleRequest(
   request,
