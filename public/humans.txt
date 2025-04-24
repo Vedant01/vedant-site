@@ -1,0 +1,39 @@
+__  __  
+\ \/ /\
+ \ \/\ \
+  \/  \ \
+
+The humans.txt file explains the team, technology,
+and graphic assets behind this site humanstxt.org.
+
+_______________________________________________________________________________
+
+DEVELOPER | デベロッパー
+
+Vedant
+Full Stack Developer & Designer
+
+Development tools:
+VS Code
+Git
+Figma
+
+linkedin.com/in/vedant
+github.com/vedant
+
+_______________________________________________________________________________
+
+TECHNOLOGY | テクノロジー
+
+React
+Remix
+Three.js
+Framer Motion
+
+_______________________________________________________________________________
+
+FONTS | フォント
+
+Gotham
+IPA Gothic Regular
+Hiragino Kaku Gothic W8

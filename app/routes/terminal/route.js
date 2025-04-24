@@ -1,0 +1,1 @@
+export { Terminal as default, meta } from './terminal'; 
