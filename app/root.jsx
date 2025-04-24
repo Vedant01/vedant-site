@@ -34,6 +34,7 @@ export const links = () => [
     as: 'font',
     type: 'font/woff2',
     crossOrigin: 'anonymous',
+    importance: 'high',
   },
   {
     rel: 'preload',
@@ -41,6 +42,7 @@ export const links = () => [
     as: 'font',
     type: 'font/woff2',
     crossOrigin: 'anonymous',
+    importance: 'high',
   },
   { rel: 'manifest', href: '/manifest.json' },
   { rel: 'icon', href: '/favicon.ico' },

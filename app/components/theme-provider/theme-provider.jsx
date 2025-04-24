@@ -121,59 +121,74 @@ const tokenStyles = squish(`
 
 const createFontStyles = fonts => `
   @font-face {
-    font-family: Gotham;
+    font-family: 'Gotham';
     font-weight: 400;
+    font-style: normal;
+    font-display: swap;
     src: url(${fonts.GothamBook}) format('woff2');
-    font-display: swap;
-    font-style: normal;
+    font-feature-settings: 'kern';
+    font-variant-ligatures: none;
+    text-rendering: optimizeLegibility;
   }
 
   @font-face {
-    font-family: Gotham;
+    font-family: 'Gotham';
     font-weight: 400;
+    font-style: italic;
+    font-display: swap;
     src: url(${fonts.GothamBookItalic}) format('woff2');
-    font-display: swap;
-    font-style: italic;
+    font-feature-settings: 'kern';
+    font-variant-ligatures: none;
   }
 
   @font-face {
-    font-family: Gotham;
+    font-family: 'Gotham';
     font-weight: 500;
+    font-style: normal;
+    font-display: swap;
     src: url(${fonts.GothamMedium}) format('woff2');
-    font-display: swap;
-    font-style: normal;
+    font-feature-settings: 'kern';
+    font-variant-ligatures: none;
   }
 
   @font-face {
-    font-family: Gotham;
+    font-family: 'Gotham';
     font-weight: 500;
+    font-style: italic;
+    font-display: swap;
     src: url(${fonts.GothamMediumItalic}) format('woff2');
-    font-display: swap;
-    font-style: italic;
+    font-feature-settings: 'kern';
+    font-variant-ligatures: none;
   }
 
   @font-face {
-    font-family: Gotham;
+    font-family: 'Gotham';
     font-weight: 700;
+    font-style: normal;
+    font-display: swap;
     src: url(${fonts.GothamBold}) format('woff2');
-    font-display: swap;
-    font-style: normal;
+    font-feature-settings: 'kern';
+    font-variant-ligatures: none;
   }
 
   @font-face {
-    font-family: Gotham;
+    font-family: 'Gotham';
     font-weight: 700;
-    src: url(${fonts.GothamBoldItalic}) format('woff2');
-    font-display: swap;
     font-style: italic;
+    font-display: swap;
+    src: url(${fonts.GothamBoldItalic}) format('woff2');
+    font-feature-settings: 'kern';
+    font-variant-ligatures: none;
   }
 
   @font-face {
-    font-family: IPA Gothic;
+    font-family: 'IPA Gothic';
     font-weight: 400;
-    src: url(${fonts.IPAGothic}) format('woff2');
-    font-display: swap;
     font-style: normal;
+    font-display: swap;
+    src: url(${fonts.IPAGothic}) format('woff2');
+    font-feature-settings: 'kern';
+    font-variant-ligatures: none;
   }
 `;
 
