@@ -25,7 +25,7 @@ export default defineConfig({
       remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
       providerImportSource: '@mdx-js/react',
     }),
-    remixCloudflareDevProxy(),
+    process.env.NODE_ENV === 'development' ? remixCloudflareDevProxy() : null,
     remix({
       routes(defineRoutes) {
         return defineRoutes(route => {
@@ -34,5 +34,5 @@ export default defineConfig({
       },
     }),
     jsconfigPaths(),
-  ],
+  ].filter(Boolean),
 });
