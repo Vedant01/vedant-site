@@ -147,7 +147,7 @@ export const Contact = () => {
       <Transition unmount in={!success} timeout={1600}>
         {({ status, nodeRef }) => (
           <Form
-            unstable_viewTransition
+            unstable_viewtransition
             className={styles.form}
             onSubmit={handleSubmit}
             ref={nodeRef}

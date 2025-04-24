@@ -56,7 +56,7 @@ function ArticlesPost({ slug, frontmatter, timecode, index }) {
         </div>
       )}
       <RouterLink
-        unstable_viewTransition
+        unstable_viewtransition
         prefetch="intent"
         to={`/articles/${slug}`}
         className={styles.postLink}

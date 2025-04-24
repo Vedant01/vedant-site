@@ -177,7 +177,7 @@ export const Navbar = () => {
           <nav className={styles.mobileNav} data-visible={visible} ref={nodeRef}>
             {navLinks.map(({ label, pathname }, index) => (
               <RouterLink
-                unstable_viewTransition
+                unstable_viewtransition
                 prefetch="intent"
                 to={pathname}
                 key={label}
