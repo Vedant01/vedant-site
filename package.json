@@ -37,6 +37,7 @@
     "@mapbox/rehype-prism": "^0.9.0",
     "@mdx-js/rollup": "^3.0.1",
     "@remix-run/dev": "^2.7.1",
+    "@remix-run/serve": "^2.16.5",
     "@remix-run/vercel": "^1.19.3",
     "@storybook/addon-a11y": "^7.6.17",
     "@storybook/addon-essentials": "^7.6.17",
