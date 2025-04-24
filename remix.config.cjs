@@ -1,5 +1,6 @@
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {
+  serverBuildTarget: "vercel",
   ignoredRouteFiles: ["**/.*"],
   serverModuleFormat: "cjs",
   future: {
@@ -8,4 +9,4 @@ module.exports = {
     v3_relativeSplatPath: true,
     v3_throwAbortReason: true
   }
-}; 
+};
