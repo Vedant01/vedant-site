@@ -124,7 +124,7 @@ const createFontStyles = fonts => `
     font-family: Gotham;
     font-weight: 400;
     src: url(${fonts.GothamBook}) format('woff2');
-    font-display: block;
+    font-display: swap;
     font-style: normal;
   }
 
@@ -132,7 +132,7 @@ const createFontStyles = fonts => `
     font-family: Gotham;
     font-weight: 400;
     src: url(${fonts.GothamBookItalic}) format('woff2');
-    font-display: block;
+    font-display: swap;
     font-style: italic;
   }
 
@@ -140,7 +140,7 @@ const createFontStyles = fonts => `
     font-family: Gotham;
     font-weight: 500;
     src: url(${fonts.GothamMedium}) format('woff2');
-    font-display: block;
+    font-display: swap;
     font-style: normal;
   }
 
@@ -148,7 +148,7 @@ const createFontStyles = fonts => `
     font-family: Gotham;
     font-weight: 500;
     src: url(${fonts.GothamMediumItalic}) format('woff2');
-    font-display: block;
+    font-display: swap;
     font-style: italic;
   }
 
@@ -156,7 +156,7 @@ const createFontStyles = fonts => `
     font-family: Gotham;
     font-weight: 700;
     src: url(${fonts.GothamBold}) format('woff2');
-    font-display: block;
+    font-display: swap;
     font-style: normal;
   }
 
@@ -164,7 +164,7 @@ const createFontStyles = fonts => `
     font-family: Gotham;
     font-weight: 700;
     src: url(${fonts.GothamBoldItalic}) format('woff2');
-    font-display: block;
+    font-display: swap;
     font-style: italic;
   }
 
