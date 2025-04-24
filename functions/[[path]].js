@@ -1,5 +1,4 @@
-import { createPagesFunctionHandler } from '@remix-run/cloudflare-pages';
-
+import { createRequestHandler } from '@vercel/remix';
 import * as build from '../build/server';
 
-export const onRequest = createPagesFunctionHandler({ build });
+export default createRequestHandler({ build });
