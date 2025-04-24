@@ -125,7 +125,7 @@ const createFontStyles = fonts => `
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-    src: url(${fonts.GothamBook}) format('woff2');
+    src: url('/assets/fonts/gotham-book.woff2') format('woff2');
     font-feature-settings: 'kern';
     font-variant-ligatures: none;
     text-rendering: optimizeLegibility;
@@ -136,7 +136,7 @@ const createFontStyles = fonts => `
     font-weight: 400;
     font-style: italic;
     font-display: swap;
-    src: url(${fonts.GothamBookItalic}) format('woff2');
+    src: url('/assets/fonts/gotham-book-italic.woff2') format('woff2');
     font-feature-settings: 'kern';
     font-variant-ligatures: none;
   }
@@ -146,7 +146,7 @@ const createFontStyles = fonts => `
     font-weight: 500;
     font-style: normal;
     font-display: swap;
-    src: url(${fonts.GothamMedium}) format('woff2');
+    src: url('/assets/fonts/gotham-medium.woff2') format('woff2');
     font-feature-settings: 'kern';
     font-variant-ligatures: none;
   }
@@ -156,7 +156,7 @@ const createFontStyles = fonts => `
     font-weight: 500;
     font-style: italic;
     font-display: swap;
-    src: url(${fonts.GothamMediumItalic}) format('woff2');
+    src: url('/assets/fonts/gotham-medium-italic.woff2') format('woff2');
     font-feature-settings: 'kern';
     font-variant-ligatures: none;
   }
@@ -166,7 +166,7 @@ const createFontStyles = fonts => `
     font-weight: 700;
     font-style: normal;
     font-display: swap;
-    src: url(${fonts.GothamBold}) format('woff2');
+    src: url('/assets/fonts/gotham-bold.woff2') format('woff2');
     font-feature-settings: 'kern';
     font-variant-ligatures: none;
   }
@@ -176,7 +176,7 @@ const createFontStyles = fonts => `
     font-weight: 700;
     font-style: italic;
     font-display: swap;
-    src: url(${fonts.GothamBoldItalic}) format('woff2');
+    src: url('/assets/fonts/gotham-bold-italic.woff2') format('woff2');
     font-feature-settings: 'kern';
     font-variant-ligatures: none;
   }
@@ -186,7 +186,7 @@ const createFontStyles = fonts => `
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-    src: url(${fonts.IPAGothic}) format('woff2');
+    src: url('/assets/fonts/ipa-gothic.woff2') format('woff2');
     font-feature-settings: 'kern';
     font-variant-ligatures: none;
   }
