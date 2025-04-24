@@ -9,6 +9,10 @@ const fonts = {
   IPAGothic: '/assets/fonts/ipa-gothic.woff2'
 };
 
+// Reminder: Always use root-relative paths (e.g. /assets/...) for static assets in code and CSS.
+// Reminder: Move all runtime assets (fonts, .glb, images) to public/assets/ and update code references accordingly.
+// Reminder: Check file/folder case sensitivity and ensure all assets are committed and pushed to git before deploying to Vercel.
+
 import { createContext, useContext } from 'react';
 import { classes, media } from '~/utils/style';
 import { themes, tokens } from './theme';
@@ -121,74 +125,53 @@ const tokenStyles = squish(`
 
 const createFontStyles = fonts => `
   @font-face {
-    font-family: 'Gotham';
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+    font-family: 'GothamBook';
     src: url('/assets/fonts/gotham-book.woff2') format('woff2');
-    font-feature-settings: 'kern';
-    font-variant-ligatures: none;
-    text-rendering: optimizeLegibility;
-  }
-
-  @font-face {
-    font-family: 'Gotham';
-    font-weight: 400;
-    font-style: italic;
+    font-weight: normal;
+    font-style: normal;
     font-display: swap;
+  }
+  @font-face {
+    font-family: 'GothamBook';
     src: url('/assets/fonts/gotham-book-italic.woff2') format('woff2');
-    font-feature-settings: 'kern';
-    font-variant-ligatures: none;
-  }
-
-  @font-face {
-    font-family: 'Gotham';
-    font-weight: 500;
-    font-style: normal;
+    font-weight: normal;
+    font-style: italic;
     font-display: swap;
+  }
+  @font-face {
+    font-family: 'GothamMedium';
     src: url('/assets/fonts/gotham-medium.woff2') format('woff2');
-    font-feature-settings: 'kern';
-    font-variant-ligatures: none;
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
   }
-
   @font-face {
-    font-family: 'Gotham';
+    font-family: 'GothamMedium';
+    src: url('/assets/fonts/gotham-medium-italic.woff2') format('woff2');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
-    src: url('/assets/fonts/gotham-medium-italic.woff2') format('woff2');
-    font-feature-settings: 'kern';
-    font-variant-ligatures: none;
   }
-
   @font-face {
-    font-family: 'Gotham';
-    font-weight: 700;
+    font-family: 'GothamBold';
+    src: url('/assets/fonts/gotham-bold.woff2') format('woff2');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
-    src: url('/assets/fonts/gotham-bold.woff2') format('woff2');
-    font-feature-settings: 'kern';
-    font-variant-ligatures: none;
   }
-
   @font-face {
-    font-family: 'Gotham';
-    font-weight: 700;
+    font-family: 'GothamBold';
+    src: url('/assets/fonts/gotham-bold-italic.woff2') format('woff2');
+    font-weight: bold;
     font-style: italic;
     font-display: swap;
-    src: url('/assets/fonts/gotham-bold-italic.woff2') format('woff2');
-    font-feature-settings: 'kern';
-    font-variant-ligatures: none;
   }
-
   @font-face {
     font-family: 'IPA Gothic';
-    font-weight: 400;
+    src: url('/assets/fonts/ipa-gothic.woff2') format('woff2');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
-    src: url('/assets/fonts/ipa-gothic.woff2') format('woff2');
-    font-feature-settings: 'kern';
-    font-variant-ligatures: none;
   }
 `;
 
