@@ -1,9 +1,9 @@
 {
   "name": "portfolio",
-  "homepage": "https://hamishw.com",
+  "homepage": "https://vedant01.github.io/port-website/",
   "description": "Portfolio site for Hamish Williams",
-  "repository": "https://github.com/HamishMW/portfolio.git",
-  "author": "Hamish Williams",
+  "repository": "https://github.com/Vedant01/port-website.git",
+  "author": "Vedant Agarwal",
   "sideEffects": false,
   "type": "module",
   "scripts": {
@@ -11,6 +11,7 @@
     "dev": "node ./scripts/dev.cjs && remix vite:dev",
     "start": "wrangler pages dev ./build/client",
     "postinstall": "node ./scripts/draco.cjs",
+    "predeploy": "npm run build && wrangler pages publish ./build/client --project-name portfolio",
     "deploy": "npm run build && wrangler pages deploy ./build/client --project-name portfolio",
     "dev:storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
