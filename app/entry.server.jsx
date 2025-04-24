@@ -7,11 +7,10 @@ export default function (
   responseHeaders,
   remixContext
 ) {
-  const remixServer = <RemixServer context={remixContext} url={request.url} />;
   return handleRequest(
     request,
     responseStatusCode,
     responseHeaders,
-    remixServer
+    <RemixServer context={remixContext} url={request.url} />
   );
 }
