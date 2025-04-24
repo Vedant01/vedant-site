@@ -1,38 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hamishw.com/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://vedantagarwal.me/</loc>
   </url>
   <url>
-    <loc>https://hamishw.com/contact/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://vedantagarwal.me/contact/</loc>
   </url>
   <url>
-    <loc>https://hamishw.com/articles/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://vedantagarwal.me/articles/</loc>
   </url>
   <url>
-    <loc>https://hamishw.com/uses/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://vedantagarwal.me/uses/</loc>
   </url>
   <url>
-    <loc>https://hamishw.com/projects/slice/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://vedantagarwal.me/projects/slice/</loc>
   </url>
   <url>
-    <loc>https://hamishw.com/projects/smart-sparrow/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://vedantagarwal.me/projects/smart-sparrow/</loc>
   </url>
   <url>
-    <loc>https://hamishw.com/projects/volkihar-knight/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://vedantagarwal.me/projects/volkihar-knight/</loc>
   </url>
   <url>
-    <loc>https://hamishw.com/articles/hello-world</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://vedantagarwal.me/articles/hello-world</loc>
   </url>
   <url>
-    <loc>https://hamishw.com/articles/modern-styling-in-react</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://vedantagarwal.me/articles/modern-styling-in-react</loc>
   </url>
 </urlset>

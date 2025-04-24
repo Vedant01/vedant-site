@@ -1,7 +1,10 @@
-import notFoundPoster from '~/assets/notfound.jpg';
-import notFoundVideo from '~/assets/notfound.mp4';
-import flatlinePoster from '~/assets/flatline.png';
-import flatlineVideo from '~/assets/flatline.mp4';
+// Update asset imports to use public paths
+const notFoundPoster = '/assets/notfound.jpg';
+const notFoundVideo = '/assets/notfound.mp4';
+const flatlinePoster = '/assets/flatline.png';
+const flatlineVideo = '/assets/flatline.mp4';
+const flatlineAltVideo = '/assets/flatline-alt.mp4';
+
 import { Button } from '~/components/button';
 import { DecoderText } from '~/components/decoder-text';
 import { Heading } from '~/components/heading';

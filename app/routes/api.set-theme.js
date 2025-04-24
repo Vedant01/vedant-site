@@ -11,8 +11,8 @@ export async function action({ request, context }) {
       maxAge: 604_800,
       path: '/',
       sameSite: 'lax',
-      secrets: [context.cloudflare.env.SESSION_SECRET || ' '],
-      secure: true,
+      secrets: [context.cloudflare?.env?.SESSION_SECRET || 'default-secret'],
+      secure: process.env.NODE_ENV === 'production',
     },
   });
 
@@ -20,7 +20,7 @@ export async function action({ request, context }) {
   session.set('theme', theme);
 
   return json(
-    { status: 'success' },
+    { success: true, theme },
     {
       headers: {
         'Set-Cookie': await commitSession(session),

@@ -1,5 +1,6 @@
-import iphone11 from '~/assets/iphone-11.glb';
-import macbookPro from '~/assets/macbook-pro.glb';
+// Update 3D model paths to use public assets
+const iphone11 = '/assets/iphone-11.glb';
+const macbookPro = '/assets/macbook-pro.glb';
 
 export const ModelAnimationType = {
   SpringUp: 'spring-up',

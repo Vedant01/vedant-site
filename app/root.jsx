@@ -11,9 +11,7 @@ import {
 } from '@remix-run/react';
 import { createCookieSessionStorage, json } from '@remix-run/node';
 import { ThemeProvider, themeStyles } from '~/components/theme-provider';
-import GothamBook from '~/assets/fonts/gotham-book.woff2';
-import GothamMedium from '~/assets/fonts/gotham-medium.woff2';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Error } from '~/layouts/error';
 import { VisuallyHidden } from '~/components/visually-hidden';
 import { Navbar } from '~/layouts/navbar';
@@ -23,17 +21,23 @@ import styles from './root.module.css';
 import './reset.module.css';
 import './global.module.css';
 
+// Update font paths to use public directory
+const fonts = {
+  GothamBook: '/assets/fonts/gotham-book.woff2',
+  GothamMedium: '/assets/fonts/gotham-medium.woff2',
+};
+
 export const links = () => [
   {
     rel: 'preload',
-    href: GothamMedium,
+    href: fonts.GothamMedium,
     as: 'font',
     type: 'font/woff2',
     crossOrigin: '',
   },
   {
     rel: 'preload',
-    href: GothamBook,
+    href: fonts.GothamBook,
     as: 'font',
     type: 'font/woff2',
     crossOrigin: '',
@@ -78,17 +82,25 @@ export const loader = async ({ request }) => {
 };
 
 export default function App() {
-  let { canonicalUrl, theme } = useLoaderData();
+  let { canonicalUrl, theme: initialTheme } = useLoaderData();
   const fetcher = useFetcher();
   const { state } = useNavigation();
+  const [theme, setTheme] = useState(initialTheme);
 
-  if (fetcher.formData?.has('theme')) {
-    theme = fetcher.formData.get('theme');
-  }
+  // Update theme when fetcher returns
+  useEffect(() => {
+    if (fetcher.data?.theme) {
+      setTheme(fetcher.data.theme);
+    }
+  }, [fetcher.data]);
 
   function toggleTheme(newTheme) {
+    const nextTheme = newTheme ? newTheme : theme === 'dark' ? 'light' : 'dark';
+    // Update local state immediately
+    setTheme(nextTheme);
+    // Persist the change
     fetcher.submit(
-      { theme: newTheme ? newTheme : theme === 'dark' ? 'light' : 'dark' },
+      { theme: nextTheme },
       { action: '/api/set-theme', method: 'post' }
     );
   }
@@ -105,7 +117,6 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Theme color doesn't support oklch so I'm hard coding these hexes for now */}
         <meta name="theme-color" content={theme === 'dark' ? '#111' : '#F2F2F2'} />
         <meta
           name="color-scheme"

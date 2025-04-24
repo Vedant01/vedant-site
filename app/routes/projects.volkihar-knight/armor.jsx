@@ -1,10 +1,13 @@
-import vknx from '~/assets/volkihar-cube-nx.jpg';
-import vkny from '~/assets/volkihar-cube-ny.jpg';
-import vknz from '~/assets/volkihar-cube-nz.jpg';
-import vkpx from '~/assets/volkihar-cube-px.jpg';
-import vkpy from '~/assets/volkihar-cube-py.jpg';
-import vkpz from '~/assets/volkihar-cube-pz.jpg';
-import armor from '~/assets/volkihar-knight.glb';
+// Update 3D asset paths to use public directory
+const modelPath = '/assets/volkihar-knight.glb';
+const cubemapPx = '/assets/volkihar-cube-px.jpg';
+const cubemapNx = '/assets/volkihar-cube-nx.jpg';
+const cubemapPy = '/assets/volkihar-cube-py.jpg';
+const cubemapNy = '/assets/volkihar-cube-ny.jpg';
+const cubemapPz = '/assets/volkihar-cube-pz.jpg';
+const cubemapNz = '/assets/volkihar-cube-nz.jpg';
+
+import { useTheme } from '~/components/theme-provider';
 import { Loader } from '~/components/loader';
 import { tokens } from '~/components/theme-provider/theme';
 import { Transition } from '~/components/transition';
@@ -95,8 +98,8 @@ export const Armor = ({
     lights.current.forEach(light => scene.current.add(light));
 
     const load = async () => {
-      const loadGltf = modelLoader.loadAsync(armor);
-      const loadEnv = cubeTextureLoader.loadAsync([vknx, vkny, vknz, vkpx, vkpy, vkpz]);
+      const loadGltf = modelLoader.loadAsync(modelPath);
+      const loadEnv = cubeTextureLoader.loadAsync([cubemapNx, cubemapNy, cubemapNz, cubemapPx, cubemapPy, cubemapPz]);
 
       const [gltf, envTexture] = await Promise.all([loadGltf, loadEnv]);
 

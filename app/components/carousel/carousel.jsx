@@ -16,8 +16,10 @@ import { resolveSrcFromSrcSet } from '~/utils/image';
 import { cssProps } from '~/utils/style';
 import { cleanRenderer, cleanScene, textureLoader } from '~/utils/three';
 import styles from './carousel.module.css';
-import fragment from './carousel-fragment.glsl?raw';
-import vertex from './carousel-vertex.glsl?raw';
+
+// Import shaders from public directory
+const vertexShader = '/assets/shaders/carousel-vertex.glsl';
+const fragmentShader = '/assets/shaders/carousel-fragment.glsl';
 
 function determineIndex(imageIndex, index, images, direction) {
   if (index !== null) return index;
@@ -122,8 +124,8 @@ export const Carousel = ({ width, height, images, placeholder, ...rest }) => {
           nextImage: { type: 't', value: textures[1] },
           reduceMotion: { type: 'b', value: reduceMotion },
         },
-        vertexShader: vertex,
-        fragmentShader: fragment,
+        vertexShader: vertexShader,
+        fragmentShader: fragmentShader,
         transparent: false,
         opacity: 1,
       });
